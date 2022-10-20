@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap" rel="stylesheet"> 
+    <script>
+        function przelicz (){
+        const j = document.getElementById("jezor").value;
+        const p = document.getElementById("lvl").value;
+        const r = document.getElementById("rodzaje").value;
+        
+        var r404="";
+        if(!j){
+            r404= r404+"Nie wybrano jezyka \n";
+        }
+        if(!p){
+            r404= r404+"Nie wybrano poziomu \n";
+        }
+        if(!r){
+            r404= r404+"Nie wybrano rodzaju \n";
+        }
+
+        if(r404!==""){
+            alert(r404);
+        }else{
+            alert("Wybrano:\nJęzyk: "+document.getElementById("jezor").value+"\nPoziom zaawansowania: "+document.getElementById("lvl").value+"\nRodzaj skryptu: "+document.getElementById("rodzaje").value);
+
+        }
+        
+
+        
+        }
+        
+        
+        
+
+    </script></head>
+<body>
+    <div id="glowna">
+        <h1>WITAMY W BLACK COMPANY</h1>
+    </div>
+
+<div  class="container">
+    <div class="lewo">
+    <h2>Wybór usługi</h2>
+    <h5>KLIKNIJ DWA RAZY</h5>
+
+    Język programowania:<br>
+
+    <input list="jezyki" id="jezor">
+    <datalist id="jezyki">
+        <option value="Python">
+        <option value="Java Script">
+        <option value="Pascal">
+        <option value="C++">
+        <option value="C#">
+    </datalist>
+
+    <br>Poziom zawansowania:<br>
+    <input list="poziom" id="lvl">
+    <datalist id="poziom">
+        <option value="Szkoła podstawowa">
+        <option value="Liceum">
+        <option value="Technikum">
+        <option value="Szkoła zawodowa">
+        <option value="Studia">
+        <option value="Nauczyciel">
+    </datalist>
+
+    <br>Rodzaj skryptu:<br>
+    <input list="rodzaj" id="rodzaje">
+    <datalist id="rodzaj">
+        <option value="Prosty skrypt">
+        <option value="Zadanie domowe">
+        <option value="Zadanie dodatkowe">
+        <option value="Projekt grupowy">
+        <option value="Strona internetowa">
+    </datalist>
+    <br>Podaj polecenie zadania<br>
+
+    <input type=button id="przycisk" value="Przelicz koszt" onClick="przelicz()">
+</div>
+
+
+
+    <div class="prawo">
+    <img src="./images/0_0_productGfx_410.jpg" id="zdjecie">
+    <br>Malina.<br>Specjalizuje się w złożonych skryptach<br>
+
+    <img src="./images/avatar.jpg" id="zdjecie">
+    <br>Blaćka.<br>Specjalizuje sie w skryptach złożonych. Często chowa jakieś sekrety.<br>
+
+    <img src="./images/tutel.jpg" id="zdjecie">
+    <br>Tutel.<br>Specjalizuje się w projektach grupowych.
+    </div>
+</div>
+</div>
+
+</body>
+</html>
